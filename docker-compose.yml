@@ -1,0 +1,7 @@
+version: "3"
+services:
+  arch:
+    container_name: arch
+    image: archlinux
+    restart: on-failure
+    command: ["sleep", "infinity"]

@@ -2,15 +2,17 @@ import { appendFile } from "node:fs/promises";
 import { Glob } from "bun";
 import { mkdir } from "node:fs/promises";
 
-const basePath = "./fetched/der_oelprinz";
-const outFile = "./out/der_Oelprinz.ts";
+const basePath = "./fetched/winnetou_1";
+const outFile = "./out/Winnetou_1.ts";
 const outPath = "./out";
 
-const before =
-  "https://vod3.cf.dmcdn.net/sec2(L2YyfFG24exDoKLPqzv9ZLd_KE5gjDnZ-Dr2nwPqzm82ZWZdVYnKUpMK69jpCJVK121ICcODQWnPqcO0JixmpETScf7iDKnKuMUDt-YslI4zhVb695w_LzsHJmc6ytHAuYNv-eBqR1VCSH7m0hjx6u4AxpHYaI6JSsdmU_VuPgo)/frag(";
-const after = ")/video/412/113/124311214_mp4_h264_aac_hq.ts";
+// https://hfs299.serversicuro.cc/hls/dnzpe3tn3tg4a3gyvdfx5lbuqyss77ehxpq6kjhfthvkkepii2t7yat5byba/seg-14-v1-a1.ts
 
-const fetched = false;
+const before =
+  "https://hfs299.serversicuro.cc/hls/dnzpe3tn3tg4a3gyvdfx5lbuqyss77ehxpq6kjhfthvkkepii2t7yat5byba/seg-";
+const after = "-v1-a1.ts";
+
+const fetched = true;
 
 if (!fetched) {
   await mkdir(basePath, { recursive: true });
